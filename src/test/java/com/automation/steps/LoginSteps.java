@@ -3,7 +3,9 @@ package com.automation.steps;
 import com.automation.pages.LoginPage;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 public class LoginSteps {
 
@@ -16,7 +18,7 @@ public class LoginSteps {
 
     @When("user enters login credentials {string} and {string}")
     public void user_enters_login_credentials_and(String username, String password) {
-        loginPage.enterValidCredentials(ConfigReader.getConfigValue(username), ConfigReader.getConfigValue(password));
+        loginPage.enterValidCredentials(username, password);
     }
 
     @When("clicks on login button")
@@ -24,4 +26,8 @@ public class LoginSteps {
         loginPage.clickOnLoginBtn();
     }
 
+    @Then("verify error message is displayed")
+    public void verifyErrorMessageIsDisplayed() {
+        Assert.assertTrue(loginPage.isErrorMsgDisplayed());
+    }
 }
