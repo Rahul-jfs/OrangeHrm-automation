@@ -13,7 +13,6 @@ public class Hooks {
     public void setUp(Scenario scenario){
         ConfigReader.initConfig();
         DriverManager.initDriver();
-        ReportManager.initReporter(scenario);
     }
 
     @After
