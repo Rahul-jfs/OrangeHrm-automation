@@ -27,4 +27,8 @@ public class LoginPage extends BasePage{
     public void clickOnLoginBtn() {
         loginBtn.click();
     }
+
+    public boolean isLoginPageDisplayed() {
+        return usernameInput.isDisplayed() && loginBtn.isDisplayed();
+    }
 }

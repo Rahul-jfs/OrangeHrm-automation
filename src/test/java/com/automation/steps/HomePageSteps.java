@@ -21,4 +21,19 @@ public class HomePageSteps {
         homePage.clickOnLeaveOption();
     }
 
+    @When("user clicks on profile picture")
+    public void userClicksOnProfilePicture() {
+        homePage.clickOnProfilePicture();
+    }
+
+    @Then("verify options are profile related options are displayed")
+    public void verifyOptionsAreProfileRelatedOptionsAreDisplayed() {
+        Assert.assertTrue(homePage.isProfileRelatedOptionsDisplayed());
+    }
+
+    @When("user clicks on logout button")
+    public void userClicksOnLogoutButton() {
+        homePage.clickOnLogoutBtn();
+    }
+
 }
