@@ -53,13 +53,7 @@
                         </goals>
                         <configuration>
                                 <projectName>Cucumber Framework OrangeHRM</projectName>
-                            <!-- output directory for the generated report -->
                             <outputDirectory>CucumberReport</outputDirectory>
-                            <!-- optional, defaults to outputDirectory if not specified -->
-                            <jsonFiles>
-                                <!-- supports wildcard or name pattern -->
-                                <param>**/*.json</param>
-                            </jsonFiles>
                         </configuration>
                     </execution>
                 </executions>
